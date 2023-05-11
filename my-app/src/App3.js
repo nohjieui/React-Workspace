@@ -1,5 +1,6 @@
 import './App.css';
-import { Pure,Shallow,FunctionComponent } from './05_PureComponent';
+import { Pure,Shallow } from './05_PureComponent';
+import {FunctionComponent} from './06_FunctionComponent'
 function App3(){
     return(
         //<Pure/>
