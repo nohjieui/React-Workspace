@@ -29,7 +29,7 @@ class StateAndEvent extends Component{
 
         // setState()메서드 활용
         // state의 상태도 변경시키면서 화면에 변경된 값을 불러오는 방법
-        // setState사용시 컴포넌트의 State값이 변경되었다고 간주하여 render메서드를 자동으로 호출한다
+        // setState사용시 컴포넌트의 ★state값이 변경★되었다고 간주하여 ★render메서드를 자동으로 호출★한다
         // if(flag == "click"){
         //     this.setState({StateString:'클릭됨'})
         // }

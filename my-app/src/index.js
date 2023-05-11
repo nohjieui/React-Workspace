@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import App2 from './App2';
+import App3 from './App3';
 import reportWebVitals from './reportWebVitals';
 
 // 루트노드
@@ -23,8 +24,9 @@ root.render(
       리액트에서 소문자는 html dom요소(div, p, h2)로 해석을하고
       대문자로 시작하면 컴포넌트 요소로 해석하기 때문.
     */
-    <App />
+    //<App />
     //<App2 />
+    <App3/>
 );
 
 // If you want to start measuring performance in your app, pass a function

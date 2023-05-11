@@ -15,6 +15,8 @@ import PropsDatatype from './02_PropsDatatype';
   JSX(JavascriptXML)문법 : javascript문법 안에는 HTML요소가 함께 들어가있는 형태의 언어
   리액트에서 ui를 구성하기 위해 보편적으로 사용되는 문법
   자바스크립트의 문법을 통해 HTML 요소를 생성하는 역할을 함
+
+  -> 자바스크립트 문법 안에 html요소가 함께 들어가있는 형태의 언어, react를 개발할때 보편적으로 사용된다.
   
   document.createElement("div") (명령적방식)
   let body = document.querySelector("body");
