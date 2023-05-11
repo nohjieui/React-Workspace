@@ -1,9 +1,10 @@
 import './App.css';
-import { Pure } from './05_PureComponent';
+import { Pure,Shallow,FunctionComponent } from './05_PureComponent';
 function App3(){
     return(
-
-        <Pure/>
+        //<Pure/>
+        //<Shallow/>
+        <FunctionComponent/>
     )
 }
 
