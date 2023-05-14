@@ -19,17 +19,17 @@ import Children from "./contextChildren1";
 const {Provider, Consumer} = React.createContext();
 // 공급자, 소비자변수를 할당
 
-// 하위컴포넌트에서 Consumer 사용 가능
-
 
 class ContextApi extends React.Component{
-
+    
     // 컨텍스트를 이용하여 자식컴포넌트에서 부모컴포넌트의 데이터를 변경하기
     constructor(props){
         super(props);
         this.setStateFunc = this.setStateFunc.bind(this);
+        // bind() : 자바스크립트에 존재하는 함수로 setStateFunc()함수안에서 사용하는 this라는 키워드를
+        // 현재 ContextApi의 this로 묶어주는 것
     }
-
+    
     setStateFunc(value){
         this.setState({name : value});
     }
@@ -38,9 +38,7 @@ class ContextApi extends React.Component{
         const content = {
             ...this.state,
             setStateFunc : this.setStateFunc
-            /* 
-                자식에게 넘겨줄 데이터에 부모의 상태값(state)과 상태값을 변경해줄 수 있는 함수(setState)를 넘겨줌
-            */
+            /* 자식에게 넘겨줄 데이터에 부모의 상태값(state)과 상태값을 변경해줄 수 있는 함수(setState)를 넘겨줌 */
         }
         
         return(
@@ -53,3 +51,4 @@ class ContextApi extends React.Component{
 }
 
 export {Consumer, ContextApi};
+// 하위컴포넌트에서 Consumer 사용 가능

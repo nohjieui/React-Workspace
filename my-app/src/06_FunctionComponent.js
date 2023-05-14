@@ -23,7 +23,7 @@ function FunctionComponent(props){
         반환된 값을 담아줄 첫번째 인자(stateString) : state의 변수명(state.stateString)
         반환된 값을 담아줄 두번째 인자(setString)   : stateString값을 변경해주는 함수를 저장 (setState()와 비슷한 역할)
     */
-    // ['react', ] 0번째 인덱스 : 변수명, 2번째 인덱스 : callback함수 호출
+    // ['react', ] 0번째 인덱스 : 변수명, 1번째 인덱스 : callback함수 호출
     useEffect( () => {
         console.log("useEffect 테스트");
     });

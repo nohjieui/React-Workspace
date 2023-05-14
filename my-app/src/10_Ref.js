@@ -14,17 +14,27 @@ class ReactRef extends React.Component{
     }
 
     RefFocus = () =>{
-        // 요소에 대한 정보다 current안에 할당되어 있다.
+        // 요소에 대한 정보가 current안에 할당되어 있다.
+        console.log(this.InputRef); // {current: input#id1}
+        console.log(this.InputRef.current); // <input id="id1" type="text">
         this.InputRef.current.focus();
     }
+
+    // 자바스크립트 방식 요소 선택
+    JavsscriptFocus(){
+        document.getElementById("id1").focus();
+    }
+
     render(){
         return(
             <>
                 {/* input 요소에 ref속성을 추가하고 생성자 함수 내부에 선언한 InputRef변수 할당시,
-                        현재 input요소에 대한 정보를 InputRef를 통해 참조할 수 있다. */}
+                    현재 input요소에 대한 정보를 InputRef를 통해 참조할 수 있다. */}
                 <input id="id1" type="text" ref={this.InputRef}/>
 
                 <input type="button" value="REF" onClick={this.RefFocus}/>
+
+                <input type="button" value="JavaScript Focus" onClick={this.JavsscriptFocus}/>
             </>
         )
     }

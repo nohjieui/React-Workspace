@@ -8,7 +8,7 @@
     react-router-dom은 BrowserRouter, Router, Link기능을 제공함
     Router는 호출되는 url에 따라 이동할 Component를 정의함
     Link는 <a>태그와 같이 패키지에 표시되는 링크를 클릭하면 url을 호출한다.
-    Router 와 Link를 사용하기 위해서는 BrowserRouter라는 태그로 감싸서 사용해야한다.
+    Route 와 Link를 사용하기 위해서는 BrowserRouter라는 태그로 감싸서 사용해야한다.
 */
 import React from "react";
 import {Route, Routes} from 'react-router-dom';
@@ -35,7 +35,7 @@ class RouterComponent extends React.Component{
                     </Routes>
                 {/* </BrowserRouter> */}
                 {/* 
-                    RouterComponent.js는 라우팅전용 컴포넌트로 사용될 예정
+                    09_RouterComponent.js는 라우팅전용 컴포넌트로 사용될 예정
                     RouterComponent 컴포넌트와 하위컴포넌트에서 Route와 Link를 사용할 때마다
                     BrowserRouter태그로 감싸서 사용해도 되지만, 최상위 컴포넌트에
                     BrowserRouter를 추가하게 되면 모든 후손 컴포넌트에서 라우팅 기능(route, link)를

@@ -4,9 +4,9 @@ import FunctionComponent from './06_FunctionComponent'
 import Fragments from './07_Fragments';
 function App3(){
     return(
-        //<Pure/>
-        //<Shallow/>
-        //<FunctionComponent/>
+        // <Pure/>
+        // <Shallow/>
+        // <FunctionComponent/>
 
         <table>
             <thead>

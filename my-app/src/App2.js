@@ -13,7 +13,7 @@ import StateAndEvent from './04_StateAndEvent';
     각 요소의 속성(id, class, name,... )-> attribute node
     (element 요소의 자식노드는 아님. 같은 레벨의 노드)
     텍스트 -> text node,
-    주속 ->  comment node
+    주석 ->  comment node
 
     모두 노드이면서 계층구조를 가지고 있음
     Document 아래 html 아래 html 아래 body태그 아래에 각 노드들이 계층적으로 존재함
@@ -24,10 +24,9 @@ function App2(){
         // <div>
         //     <PropNode>
         //         <span id="attribute">node from App2.js</span>
-        //         {/* <span> -> element노드, id -> attribute node, node from App2.jp -> text노드 */}
+        //         {/* <span> -> element노드 / id -> attribute node / node from App2.jp -> text노드 */}
         //         <span id="attribute">node from App2.js</span>
         //     </PropNode>
-
         // </div>
         // ==========================================================================
         <div>

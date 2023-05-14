@@ -47,18 +47,20 @@ class Pure extends PureComponent{
         return(
             <div style={{padding:"0px"}}>
                 <button onClick={()=> this.stateChange('string')}>클릭</button>
+                state ::: StateString : {this.state.StateString}<br/>
+
                 <button onClick={()=> this.stateChange('array')}>클릭</button>
+                state ::: StateArray : {this.state.StateArray.toString()}<br/>
+                
                 <button onClick={()=> this.stateChange('object')}>클릭</button>
-                state ::: StateString : {this.state.StateString}
-                state ::: StateArray : {this.state.StateArray.toString()}
                 state ::: StateObject : {JSON.stringify(this.state.StateObject)}
             </div>
             
         )
     }
-
-
 }
+
+
 class Shallow extends Component{
 
     constructor(props){
@@ -76,9 +78,9 @@ class Shallow extends Component{
         (true 반환시 render함수 호출, false반환시 render함수 미호출)
     */
     shouldComponentUpdate(nextProps, nextState){
-        //return !shallowEqualArrays(this.state.StateString, nextState.StateString);
-        //return !shallowEqualArrays(this.state.StateArray, nextState.StateArray);
-        return !shallowEqualObjects(this.state.StateObject, nextState.StateObject);
+        return !shallowEqualArrays(this.state.StateString, nextState.StateString);
+        // return !shallowEqualArrays(this.state.StateArray, nextState.StateArray);
+        // return !shallowEqualObjects(this.state.StateObject, nextState.StateObject);
 
     }
     stateChange = (flag) =>{
@@ -95,10 +97,12 @@ class Shallow extends Component{
         return(
             <div style={{padding:"0px"}}>
                 <button onClick={()=> this.stateChange('string')}>클릭</button>
-                <button onClick={()=> this.stateChange('array')}>클릭</button>
-                <button onClick={()=> this.stateChange('object')}>클릭</button>
                 state ::: StateString : {this.state.StateString}
+                <br/>
+                <button onClick={()=> this.stateChange('array')}>클릭</button>
                 state ::: StateArray : {this.state.StateArray.toString()}
+                <br/>
+                <button onClick={()=> this.stateChange('object')}>클릭</button>
                 state ::: StateObject : {JSON.stringify(this.state.StateObject)}
             </div>
             

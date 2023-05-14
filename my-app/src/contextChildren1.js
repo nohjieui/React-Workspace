@@ -7,8 +7,8 @@ class Children extends React.Component{
     render(){
         return(
             // 데이터를 전달하지 않고, 후손 컴포넌트만 return
-            <Children2/>
-            //<Children3/>
+            // <Children2/>
+            <Children3/>
         )
 
     }

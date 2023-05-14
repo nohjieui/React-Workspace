@@ -16,11 +16,23 @@ import {Component} from 'react';
 class PropsDatatype extends Component{
     render(){
         let {String, Number, Boolean, Array, ObjectJson, Function, IsRequired, StringDefault} = this.props; // this == PropsDatatype
-        /* 객체를 변수로 저장하는 es6 (구조 분해 할당) */
+        /* 
+            객체를 변수로 저장하는 es6 (구조 분해 할당)
+            this.props -> props : 부모가 넘겨주는 데이터로 {} 객체형태임
+            객체형태로 넘겨받은 데이터를 변수로 저장할 때 객체 안에들어있는 key값을 곧바로 변수명으로 쓸 수 있음
+            -> 객체에 들어있는 각각의 키값을 변수로 뽑아내는 방법
+        */
+       /* ex) 위의 구조분해 쉽게 설명하자면?
+            let obj = {name : '노지의', age : 29};
+            let {name, age} = obj; -> 객체 안에있는 key값을 변수로 뽑아내는 방법임
+            name // -> '노지의'
+            age // -> 29
+            -> 콘솔창에 한줄씩 작업해보기
+       */
 
         return(
             <div style={{padding:"0px"}}>
-                <p>StringProp : {String}</p>
+                <p>StringProp : {String}</p> {/* JSX문법 안에서는 {}영역이 곧 자바스크립트 영역임 */}
                 <p>NumberProp : {Number}</p>
                 <p>BooleanProp : {Boolean.toString()}</p>{/*  Boolean의 기본값 = true */}
                 <p>ArrayProp : {Array.toString()}</p>
@@ -34,12 +46,12 @@ class PropsDatatype extends Component{
 }
 PropsDatatype.propTypes = {
     //String : datatype.number, /* 자료형 불인치 에러. 대입되는 값의 자료형을 명확하게 전달해줘야함 */
-    Spring : datatype.string,
+    String : datatype.string,
     Number : datatype.number,
     Boolean : datatype.bool,
     Array  : datatype.array,
     ObjectJson : datatype.object,
-    // 객체 내부의 자료형을 선언할때는 spape유형을 사용함
+    // 객체 내부의 자료형을 선언할때는 shape유형을 사용함
     ObjectJson : datatype.shape({
         react : datatype.string,
         today : datatype.number
@@ -50,9 +62,9 @@ PropsDatatype.propTypes = {
 PropsDatatype.defaultProps = {
     StringDefault: "기본값" // 기본값
 }
-  
+
   /*
-    PropType사용시 속성값의 타입만 안아도 해장 컴포넌트의 구조를 어느정도 파악하기 쉽다라는 장점이 있음.
+    PropType사용시 속성값의 타입만 알아도 해당 컴포넌트의 구조를 어느정도 파악하기 쉽다라는 장점이 있음.
     따라서 각 컴포넌트(모듈)의 퀄리티를 높이기 위해 PropType를 사용하는것을 권장한다.
   */
 export default PropsDatatype;
