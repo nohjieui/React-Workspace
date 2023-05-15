@@ -10,6 +10,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Ref from './10_Ref';
 import {FetchGet, FetchPost} from './11_Fetch';
 import {AxiosGet, AxiosPost} from './12_Axios';
+import { Callback, PromiseThen, PromiseChatch } from './13_Callback';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -40,10 +41,13 @@ root.render(
     <BrowserRouter>
       <RouterComponent/>
       <Ref/>
-      <FetchGet/>
+      {/* <FetchGet/>
       <FetchPost/>
       <AxiosGet/>
-      <AxiosPost/>
+      <AxiosPost/> */}
+      <Callback/>
+      <PromiseThen/>
+      <PromiseChatch/>
     </BrowserRouter>
 );
 
